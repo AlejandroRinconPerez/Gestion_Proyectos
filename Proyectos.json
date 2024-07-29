@@ -1,0 +1,21 @@
+{
+    "p1": {
+        "Nombre": "Desarrollo de Aplicación",
+        "Fecha_incio": "2024-01-15",
+        "Fecha_fin": "2024-06-30",
+        "Tareas": {
+            "t1": {
+                "Nombre": "Diseño de UI",
+                "descripcion": "Diseñar la interfaz de usuario",
+                "fecha_vencimiento": "2024-02-15",
+                "estado": "completado"
+            },
+            "t2": {
+                "Nombre": "Desarrollo Backend",
+                "descripcion": "Desarrollar la lógica del servidor",
+                "fecha_vencimiento": "2024-03-01",
+                "estado": "en progreso"
+            }
+        }
+    }
+}
