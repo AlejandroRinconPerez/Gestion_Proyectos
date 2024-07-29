@@ -1,6 +1,6 @@
 {
     "p1": {
-        "Nombre": "Desarrollo de Aplicación",
+        "Nombre": "Desarrollo Aplicaciones",
         "Fecha_incio": "2024-01-15",
         "Fecha_fin": "2024-06-30",
         "Tareas": {
@@ -11,11 +11,12 @@
                 "estado": "completado"
             },
             "t2": {
-                "Nombre": "Desarrollo Backend",
+                "Nombre": "Diseño Api",
                 "descripcion": "Desarrollar la lógica del servidor",
                 "fecha_vencimiento": "2024-03-01",
                 "estado": "en progreso"
             }
         }
-    }
+    },
+    "Nombre": "Desarrolo de Aplicaciones"
 }

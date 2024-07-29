@@ -75,7 +75,7 @@ def ver_Proyectos():
             print(f"Ocurrió un error inesperado: {e}")
             continue
                 
-def ver_Proyectos_2 ():
+def ver_Proyectos_2():
       while True:
         try:
             cargar_datos(Ruta_JSON_Proyectos, Proyectos)
@@ -85,7 +85,7 @@ def ver_Proyectos_2 ():
                     print("Tareas")
                     for ids , datos_t in Tareas.items():
                         print(f"ID:  {ids}")
-                        print(f"Nombre: {datos_t.get("Nombre")}")
+                        print(f"Nombre: {datos_t.get('Nombre')}")
                         
                 
             return
@@ -99,17 +99,17 @@ def more ():
         try:
             cargar_datos(Ruta_JSON_Proyectos, Proyectos)
             for llave, valor in Proyectos.items():
-                print(f"Nombre: {valor.get("Nombre")}")
-                print(f"Fecha_incio: {valor.get("Fecha_incio")}")
-                print(f"Fecha_fin: {valor.get("Fecha_fin")}")
+                print(f"Nombre: {valor.get('Nombre')}")
+                print(f"Fecha_incio: {valor.get('Fecha_incio')}")
+                print(f"Fecha_fin: {valor.get('Fecha_fin')}")
                 print()
-                Tareas = valor.get("Tareas",{})
+                Tareas = valor.get('Tareas',{})
                 print()
                 if Tareas:
                     print("Tareas")
                     for llave, valor in Tareas.items():
                         print(f"ID:  {llave}")
-                        print(f"estado {valor.get("estado")}")
+                        print(f"estado {valor.get('estado')}")
                         print()
             return
                 
@@ -131,6 +131,25 @@ def delete():
         
         
             
-delete()
-    
-    
+def impresiones_3 ():
+    cargar_datos(Ruta_JSON_Proyectos, Proyectos)
+    for llave, valor in Proyectos.items():
+        Tareas = valor.get("Tareas", {})
+        for llave,valor in Tareas.items():
+            print(llave)
+            Nombre = valor.get("Nombre","No name")
+            print(Nombre)
+
+
+def modificar ():
+    cargar_datos(Ruta_JSON_Proyectos, Proyectos)
+    codigo_proyecto = input('Codigo de Proyecto:  ')
+    codigo_tareas = input('Codigo de Proyecto:  ')
+    if Proyectos.get(codigo_proyecto, None) == None:
+        print("Proyecto No Registrado")
+        return
+    Proyectos[codigo_proyecto]["Tareas"][codigo_tareas]["Nombre"]= input("Nuevo nombre de proyecto")
+    guardar_datos(Ruta_JSON_Proyectos, Proyectos)
+
+
+modificar ()
