@@ -1,8 +1,10 @@
 import json
 
 Proyectos = {}
+Banco = {}
 
 Ruta_JSON_Proyectos = "Proyectos.json"
+Ruta_JSON_Banco = "Banco.json"
 
 
 

@@ -1,0 +1,30 @@
+{
+    "793020-303404": {
+        "Tipo de tarjeta": "Visa",
+        "mes": "09",
+        "ano": "2026",
+        "COD verificacion": "645",
+        "Codigo de cleinte": {
+            "AD3YU&": {
+                "Nombre del cliente": "Alejandro",
+                "Cedula de Ciudadanía": "1095824299",
+                "Número de teléfono de contacto": "31788763402",
+                "Sexo": "Masculino"
+            }
+        }
+    },
+    "738389484": {
+        "Tipo de tarjeta": "Visa",
+        "mes": "05",
+        "ano": "2026",
+        "COD verificacion": "785",
+        "Codigo de cleinte": {
+            "ADT5HK7": {
+                "Nombre del cliente": "Julian",
+                "Cedula de Ciudadanía": "122323",
+                "Número de teléfono de contacto": "3166985834",
+                "Sexo": "No Definido"
+            }
+        }
+    }
+}
