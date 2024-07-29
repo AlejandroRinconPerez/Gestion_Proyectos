@@ -1,9 +1,5 @@
 from Datos import*
 
-
-
-
-
 def Datos_tarjeta():
     while True:
         try:
@@ -12,10 +8,10 @@ def Datos_tarjeta():
             if Banco.get(numero_tarjeta,None) == None:
                 Banco[numero_tarjeta]={}
                 print("""
-                        1.Visa
-                        2.Master
-                        3.American
-                        4,salir
+                        1. Visa
+                        2. Master
+                        3. American
+                        4. salir
                         """)
                 tipo_tarjeta = input("Ingrese la opcion deseada:  ")
                 info_tarjeta = {}
@@ -75,9 +71,7 @@ def impresion_1 ():
                 Codigo de cleinte: {llave}
                 """)
             print()
-        
-        
-        
+            
 def impresion_2 ():
     cargar_datos(Ruta_JSON_Banco, Banco)
     while True:
