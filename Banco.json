@@ -47,12 +47,7 @@
         "ano": "2030",
         "COD verificacion": "123",
         "Codigo de cleinte": {
-            "ADT5YU6": {
-                "Nombre del cliente": "Juan",
-                "Cedula de Ciudadanía": "78374728992",
-                "Número de teléfono de contacto": "32397810282",
-                "Sexo": "Masculino"
-            }
+            "ADT5YU6": {}
         }
     }
 }

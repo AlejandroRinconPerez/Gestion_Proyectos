@@ -5,7 +5,7 @@ def Datos_tarjeta():
         try:
             cargar_datos(Ruta_JSON_Banco, Banco)
             numero_tarjeta = input("Ingrese el numero de tarjeta:  ")
-            if Banco.get(numero_tarjeta,None) == None:
+            if Banco.get(numero_tarjeta,None) != None:
                 Banco[numero_tarjeta]={}
                 print("""
                         1. Visa
@@ -144,4 +144,5 @@ def Datos_Modificar():
             print(f"El error fue causado por {e}")
             continue
 
-drfsnbfdtgnftgnfgnfgn
+
+Datos_tarjeta()
