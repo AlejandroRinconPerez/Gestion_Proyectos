@@ -5,7 +5,7 @@ def Datos_tarjeta():
         try:
             cargar_datos(Ruta_JSON_Banco, Banco)
             numero_tarjeta = input("Ingrese el numero de tarjeta:  ")
-            if Banco.get(numero_tarjeta,None) == None:
+            if Banco.get(numero_tarjeta,None) != None:
                 Banco[numero_tarjeta]={}
                 print("""
                         1. Visa
@@ -24,13 +24,14 @@ def Datos_tarjeta():
                 Banco[numero_tarjeta]["Codigo de cleinte"] = {}
                 Banco[numero_tarjeta]["Codigo de cleinte"][codigo_Cleinte]={}
                 guardar_datos(Ruta_JSON_Banco, Banco)
-                return
+                break
             else:
                 print("Numero de tarjeta ya Registrado")
         except Exception as e:
             print(f"El error fue causado por {e}")
             continue
             
+
 
 
 def Datos_usuario():
@@ -53,6 +54,8 @@ def Datos_usuario():
         except Exception as e:
             print(f"El error fue causado por {e}")
             continue
+        
+
                 
 def impresion_1 ():
     cargar_datos(Ruta_JSON_Banco, Banco)
@@ -72,6 +75,9 @@ def impresion_1 ():
                 """)
             print()
             
+
+
+
 def impresion_2 ():
     cargar_datos(Ruta_JSON_Banco, Banco)
     while True:
@@ -115,16 +121,28 @@ def impresion_3():
     print(cont_master)
     return
             
-impresion_3()
+
             
-    
-    
-    
-    
-
 
     
     
-    
-    
-    
+def Datos_Modificar():
+    while True:
+        try:
+            cargar_datos(Ruta_JSON_Banco, Banco)
+            numero_tarjeta = input("Ingrese el numero de tarjeta:  ")
+            if Banco.get(numero_tarjeta,None) != None:
+                Banco[numero_tarjeta]["Tipo de tarjeta"]= input("Tipo:  ")
+                Banco[numero_tarjeta]["mes"]= input("mes:  ")
+                Banco[numero_tarjeta]["ano"]= input("ano:  ")
+                Banco[numero_tarjeta]["COD verificacion"]= input("COD verificacion:  ")
+                guardar_datos(Ruta_JSON_Banco, Banco)
+                break
+            else:
+                print("Numero de tarjeta ya Registrado")
+        except Exception as e:
+            print(f"El error fue causado por {e}")
+            continue
+
+
+Datos_Modificar()

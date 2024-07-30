@@ -1,9 +1,9 @@
 {
     "793020-303404": {
-        "Tipo de tarjeta": "Visa",
+        "Tipo de tarjeta": "Master",
         "mes": "09",
-        "ano": "2026",
-        "COD verificacion": "645",
+        "ano": "2040",
+        "COD verificacion": "567",
         "Codigo de cleinte": {
             "AD3YU&": {
                 "Nombre del cliente": "Alejandro",
@@ -14,16 +14,30 @@
         }
     },
     "738389484": {
-        "Tipo de tarjeta": "Visa",
-        "mes": "05",
-        "ano": "2026",
-        "COD verificacion": "785",
+        "Tipo de tarjeta": "Master",
+        "mes": "12",
+        "ano": "2040",
+        "COD verificacion": "456",
         "Codigo de cleinte": {
             "ADT5HK7": {
                 "Nombre del cliente": "Julian",
                 "Cedula de Ciudadanía": "122323",
                 "Número de teléfono de contacto": "3166985834",
                 "Sexo": "No Definido"
+            }
+        }
+    },
+    "823823882828": {
+        "Tipo de tarjeta": "Master",
+        "mes": "09",
+        "ano": "2028",
+        "COD verificacion": "756",
+        "Codigo de cleinte": {
+            "AFT6YT": {
+                "Nombre del cliente": "Jhoan",
+                "Cedula de Ciudadanía": "123992929",
+                "Número de teléfono de contacto": "292928993",
+                "Sexo": "Mujer"
             }
         }
     }
