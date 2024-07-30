@@ -49,5 +49,19 @@
         "Codigo de cleinte": {
             "ghfsxthdtzrfx": {}
         }
+    },
+    "8238238g828": {
+        "Tipo de tarjeta": "Master",
+        "mes": "09",
+        "ano": "2028",
+        "COD verificacion": "756",
+        "Codigo de cleinte": {
+            "AFT6YT": {
+                "Nombre del cliente": "Jhoan",
+                "Cedula de Ciudadanía": "123992929",
+                "Número de teléfono de contacto": "292928993",
+                "Sexo": "Mujer"
+            }
+        }
     }
 }
