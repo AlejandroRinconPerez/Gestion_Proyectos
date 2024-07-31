@@ -191,7 +191,8 @@ def Agregar_posicion ():
             
             if Carrera == "1":
                 Documento = input("ingrese el Documento:  ")
-                Deportes["Atletismo"][Documento]["Posicion"]=int(input("Posicion:   "))
+                posicion = int(input("Posicion:   "))
+                Deportes["Atletismo"][Documento]["Posicion"]=posicion
                 Deportes["Atletismo"][Documento]["Tiempo"]=input("Tiempo:   ")
                 guardar_datos(Ruta_JSON_Deportes, Deportes)
                 return
@@ -215,8 +216,6 @@ def Agregar_posicion ():
                 
         except Exception as e:
             print(f"error Causado por {e}")
-            
-
 def ver_todos ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
     for llave, valor in Deportes.items():
@@ -295,24 +294,40 @@ def ver_por_documento ():
                     
                     """)
                 
-
 def ver_por_posicion ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
     cont = 0
     for i in range (5):
         cont = 1+ cont
         for llave, valor in Deportes.items():
-            for llave_2, valor_2 in valor.items():
-                if valor_2.get("Posicion") == cont:
-                    print(f"""
-                        DEPORTE: {llave}
-                        Nombre: {valor_2.get("Nombre")}
-                        Documento:  { llave_2}
-                        Posicion: {valor_2.get("Posicion")}
-                        Tiempo: {valor_2.get("Tiempo")}
-                        """)
+            if llave == "Atletismo":
+                for llave_2, valor_2 in valor.items():
+                    if valor_2.get("Posicion") == cont:
+                        print(f"""
+                            DEPORTE: {llave}
+                            Nombre: {valor_2.get("Nombre")}
+                            Documento:  { llave_2}
+                            Posicion: {valor_2.get("Posicion")}
+                            Tiempo: {valor_2.get("Tiempo")}
+                            """)
                     
     
+    
+def Validar ():
+    cargar_datos(Ruta_JSON_Deportes, Deportes)
+    posicion = int(input("Posicion:   "))
+    Documento = input("ingrese el Documento:  ")
+    for llave, valor in Deportes.items():
+        if llave == "Atletismo":
+            for llave_2, valor_2 in valor.items():
+                if valor_2.get("Posicion") == posicion:
+                    print("Posicion ya ha sido Registrada")
+                else:
+                    Deportes["Atletismo"][Documento]["Posicion"]=posicion
+                    Deportes["Atletismo"][Documento]["Tiempo"]=input("Tiempo:   ")
+                    guardar_datos(Ruta_JSON_Deportes, Deportes)
+                    
+                    
 def menu():
     while True:
         try:
@@ -363,4 +378,3 @@ def menu():
             print(f"El error es causado por {e}")
             
     
-menu()
