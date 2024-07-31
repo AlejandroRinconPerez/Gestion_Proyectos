@@ -1,0 +1,50 @@
+{
+    "Atletismo": {
+        "2030196": {
+            "Nombre": "Julian",
+            "Numero": "312456",
+            "Genero": "Masculino",
+            "Posicion": 2,
+            "Tiempo": "2hr"
+        },
+        "1095824299": {
+            "Nombre": "Alejo",
+            "Numero": "31788",
+            "Genero": "Masculino",
+            "Posicion": 1,
+            "Tiempo": "2hr"
+        }
+    },
+    "Ciclismo": {
+        "10958301718": {
+            "Nombre": "Erika",
+            "Numero": "3203540457",
+            "Genero": "Femenino",
+            "Posicion": 1,
+            "Tiempo": "3hr"
+        },
+        "2344232": {
+            "Nombre": "Andrea",
+            "Numero": "234555",
+            "Genero": "Femenino",
+            "Posicion": 3,
+            "Tiempo": "2hr"
+        }
+    },
+    "Patinaje": {
+        "2030196": {
+            "Nombre": "Joaqin",
+            "Numero": "3123502876",
+            "Genero": "Masculino",
+            "Posicion": 3,
+            "Tiempo": "2hr"
+        },
+        "5423292": {
+            "Nombre": "Jhoan",
+            "Numero": "123456",
+            "Genero": "Binario",
+            "Posicion": 5,
+            "Tiempo": "2hr"
+        }
+    }
+}
