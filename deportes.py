@@ -216,7 +216,6 @@ def Agregar_posicion ():
         except Exception as e:
             print(f"error Causado por {e}")
             
-            
 
 def ver_todos ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
@@ -231,7 +230,6 @@ def ver_todos ():
                 Posicion: {valor_2.get("Posicion")}
                 Tiempo: {valor_2.get("Tiempo")}
                 """)
-            
     
 def ver_ciclismo ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
@@ -283,62 +281,37 @@ def ver_por_documento ():
     Documento = input("ingrese el Documento:  ")
     for llave, valor in Deportes.items():
             for llave_2, valor_2 in valor.items():
-                if llave_2== Documento:
-                    print(f"""
+                print(f"""
                             DEPORTE:  {llave}
                             """)
+                if llave_2 == Documento:
+                    
                     print(f"""
+                    Deporte:  {llave}
                     Nombre: {valor_2.get("Nombre")}
                     Documento:  { llave_2}
                     Posicion: {valor_2.get("Posicion")}
                     Tiempo: {valor_2.get("Tiempo")}
+                    
                     """)
                 
 
 def ver_por_posicion ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
-    for llave, valor in Deportes.items():
-        print(f"""
-                    DEPORTE:  {llave}
-                    """)
-        for llave_2, valor_2 in valor.items():
-            if valor_2.get("Posicion") == 1:
-                print(f"""
-                    Nombre: {valor_2.get("Nombre")}
-                    Documento:  { llave_2}
-                    Posicion: {valor_2.get("Posicion")}
-                    Tiempo: {valor_2.get("Tiempo")}
-                    """)
-            if valor_2.get("Posicion") == 2:
-                print(f"""
-                    Nombre: {valor_2.get("Nombre")}
-                    Documento:  { llave_2}
-                    Posicion: {valor_2.get("Posicion")}
-                    Tiempo: {valor_2.get("Tiempo")}
-                    """)
-            if valor_2.get("Posicion") == 3:
-                print(f"""
-                    Nombre: {valor_2.get("Nombre")}
-                    Documento:  { llave_2}
-                    Posicion: {valor_2.get("Posicion")}
-                    Tiempo: {valor_2.get("Tiempo")}
-                    """)
-            if valor_2.get("Posicion") == 4:
-                print(f"""
-                    Nombre: {valor_2.get("Nombre")}
-                    Documento:  { llave_2}
-                    Posicion: {valor_2.get("Posicion")}
-                    Tiempo: {valor_2.get("Tiempo")}
-                    """)
-            if valor_2.get("Posicion") == 5:
-                print(f"""
-                    Nombre: {valor_2.get("Nombre")}
-                    Documento:  { llave_2}
-                    Posicion: {valor_2.get("Posicion")}
-                    Tiempo: {valor_2.get("Tiempo")}
-                    """)
-    
-    
+    cont = 0
+    for i in range (5):
+        cont = 1+ cont
+        for llave, valor in Deportes.items():
+            for llave_2, valor_2 in valor.items():
+                if valor_2.get("Posicion") == cont:
+                    print(f"""
+                        DEPORTE: {llave}
+                        Nombre: {valor_2.get("Nombre")}
+                        Documento:  { llave_2}
+                        Posicion: {valor_2.get("Posicion")}
+                        Tiempo: {valor_2.get("Tiempo")}
+                        """)
+                    
     
 def menu():
     while True:
