@@ -310,8 +310,6 @@ def ver_por_posicion ():
                             Posicion: {valor_2.get("Posicion")}
                             Tiempo: {valor_2.get("Tiempo")}
                             """)
-                    
-    
     
 def Validar ():
     cargar_datos(Ruta_JSON_Deportes, Deportes)
